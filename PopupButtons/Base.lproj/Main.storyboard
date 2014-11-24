@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QI-OY-I3T">
+                                <rect key="frame" x="264" y="511" width="35" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="1ag-2l-8Yd"/>
+                                    <constraint firstAttribute="width" constant="35" id="cik-o7-A3h"/>
+                                </constraints>
+                                <state key="normal" title="Post Button" image="post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubU-Xk-qhi">
+                                <rect key="frame" x="264" y="514" width="35" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Um9-UC-i8y"/>
+                                    <constraint firstAttribute="height" constant="35" id="diK-kf-1r4"/>
+                                </constraints>
+                                <state key="normal" title="Refresh Button" image="refresh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-R3-jnT">
+                                <rect key="frame" x="259" y="508" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ezD-e0-HRT"/>
+                                    <constraint firstAttribute="width" constant="45" id="u0R-px-hZU"/>
+                                </constraints>
+                                <state key="normal" title="Show Menu" image="add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMenu:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Am8-Tr-vAb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bSe-R3-jnT" secondAttribute="bottom" constant="15" id="6o8-of-tAn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ubU-Xk-qhi" secondAttribute="trailing" constant="5" id="dTu-kv-lpi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ubU-Xk-qhi" secondAttribute="bottom" constant="19" id="obm-hM-bxo"/>
+                            <constraint firstItem="bSe-R3-jnT" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="u76-26-93R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1QI-OY-I3T" secondAttribute="trailing" constant="5" id="y4f-UI-X8t"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1QI-OY-I3T" secondAttribute="bottom" constant="22" id="zMH-bW-5zy"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="postButton" destination="1QI-OY-I3T" id="You-AL-klv"/>
+                        <outlet property="refreshButton" destination="ubU-Xk-qhi" id="30i-6z-ETu"/>
+                        <outlet property="showMenuButton" destination="bSe-R3-jnT" id="Lzc-2Z-Crn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="60" height="60"/>
+        <image name="post" width="60" height="60"/>
+        <image name="refresh" width="60" height="60"/>
+    </resources>
+</document>
